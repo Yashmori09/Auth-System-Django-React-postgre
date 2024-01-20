@@ -13,8 +13,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 
+from backend.auth_system.constants import *
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -93,8 +95,8 @@ DATABASES = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'myself.yash0901@gmail.com'
-EMAIL_HOST_PASSWORD = 'tbgqnycryfrcsrgj'
+EMAIL_HOST_USER = HOSTEMAIL
+EMAIL_HOST_PASSWORD = HOSTPASSWORD
 EMAIL_USE_TLS = True
 
 # Password validation
@@ -138,7 +140,7 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
-JOSER = {
+DJOSER = {
     'LOGIN_FIELD': 'email',
     'USER_CREATE_PASSWORD_RETYPE': True,
     'USERNAME_CHANGED_EMAIL_CONFIRMATION': True,

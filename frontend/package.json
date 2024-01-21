@@ -1,0 +1,19 @@
+{
+  "name": "my-vue-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.6.5",
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^6.21.3",
+    "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0"
+  }
+}

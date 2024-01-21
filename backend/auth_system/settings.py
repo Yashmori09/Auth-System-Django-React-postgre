@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 
-from backend.auth_system.constants import *
+from constants import HOSTEMAIL,HOSTPASSWORD
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -95,8 +95,8 @@ DATABASES = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = HOSTEMAIL
-EMAIL_HOST_PASSWORD = HOSTPASSWORD
+EMAIL_HOST_USER = 'myself.yash0901@gmail.com'
+EMAIL_HOST_PASSWORD = 'tbgqnycryfrcsrgj'
 EMAIL_USE_TLS = True
 
 # Password validation

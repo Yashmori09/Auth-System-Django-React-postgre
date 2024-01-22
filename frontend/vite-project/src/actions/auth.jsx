@@ -32,7 +32,7 @@ export const load_user = () => async dispatch => {
         };
 
         try {
-            const res = await axios.get(`${process.env.REACT_APP_API_URL}/auth/users/me/`, config);
+            const res = await axios.get(`${process.env.REACT_APP_API_URL}/auth/users/`, config);
 
             dispatch({
                 type: USER_LOADED_SUCCESS,
@@ -185,6 +185,7 @@ export const signup = (first_name, last_name, email, password, re_password) => a
     const body = JSON.stringify({ first_name, last_name, email, password, re_password });
 
     try {
+        // const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/users/`, body, config);
         const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/users/`, body, config);
 
         dispatch({
